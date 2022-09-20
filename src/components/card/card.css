@@ -1,0 +1,74 @@
+.credit-card {
+  margin-top: 20px;
+  margin-left: 100px;
+  height: 250px;
+  width: 400px;
+  border: 0;
+  border-radius: 10px;
+  background: url(http://www.psdgraphics.com/file/world-map-background.jpg)
+    no-repeat center center;
+  background-size: cover;
+  color: #fff;
+}
+
+.myForm {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.credit-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 400px;
+  height: 250px;
+  padding: 25px;
+  border-radius: 15px;
+
+  color: white;
+
+  background-image: linear-gradient(25deg, #0f509e, #1399cd);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.cardHoldersName {
+  text-transform: capitalize;
+}
+
+.credit-card__number {
+  display: flex;
+  justify-content: center;
+
+  font-family: "Fjalla One", sans-serif;
+  font-size: 45px;
+}
+
+.credit-card__info {
+  display: flex;
+  justify-content: space-between;
+
+  font-family: "Fjalla One", sans-serif;
+  font-size: 25px;
+}
+
+.credit-card__info_label {
+  font-size: 14px;
+}
+
+.credit-card__info_expiry {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/*card logos visa, masterCard osv*/
+.picVisaCard {
+  background-image: url('./images/logos_visa.png');
+  width: 140px;
+  height: auto;
+  color: orangered;
+  background-color: #fff;
+
+}

@@ -1,0 +1,12 @@
+* {
+  list-style: none;
+}
+
+.active {
+  border: 3px solid green;
+  background-color: green;
+}
+
+.inactive {
+  border: none;
+}

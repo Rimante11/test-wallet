@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles.css";
+//alla fron return dvs Route, Routes osv
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Ewallet from "./components/pages/Ewallet";
+import AddCard from "./components/pages/AddCard";
+import { fetchRandomUser } from "./redux/cardSlice";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+export default function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchRandomUser());
+  }, [dispatch]);
 
-function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <h1> E-wallet with React</h1>
+
+        <Link to="/ewallet">
+          <button> E-wallet </button>
+        </Link>
+        <Link to="/addcard">
+          <button> AddCard</button>
+        </Link>
+
+        <Routes>
+          <Route path="/ewallet" element={<Ewallet />} />
+          <Route path="/addcard" element={<AddCard />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
-export default App;
+
+
+
+
+// import './App.css';
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+     
+//       </header>
+//     </div>
+//   );
+// }
+
+// export default App;
